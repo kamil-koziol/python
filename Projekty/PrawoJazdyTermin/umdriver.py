@@ -35,10 +35,8 @@ class UMDriver(webdriver.Firefox):
         time.sleep(self.SLEEP_TIME)
         daty = self.find_elements_by_class_name("v-btn--disabled")
         daty.pop(0)
-        print(daty)
-
         days_in_current_month = UMDriver.month_days(date.today().month)
-        wolne_dni = [i for i in range(1, days_in_current_month)]
+        wolne_dni = [i for i in range(1, days_in_current_month+1)]
 
         for data in daty:
             wolne_dni.remove(int(data.text))
