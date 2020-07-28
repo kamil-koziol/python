@@ -1,0 +1,7 @@
+1. Chyba takie: zwykle nie u¿ywamy zbyt d³ugich nazw zmiennych.
+
+2. Zazwyczaj programisci decyduj¹ siê na u¿ywanie nazw zmiennych "po angielsku"
+
+3. Warto wypracowaæ sobie konwencjê nazewnicz¹ zmiennych, np tzw. 
+Camel Notation tj. slowa zbijamy razem (bez spacji i bez "_") i ka¿dy nowy wyraz piszemy wielk¹ liter¹ np ToJestNazwaZmiennej. 
+Zwykle nazwy zmiennych pisze siê ma³¹ liter¹ czyli lepiej bêdzie toJestNazwaZmiennej.... ale wszystko zale¿y od stylu!
