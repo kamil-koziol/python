@@ -99,13 +99,17 @@ class ScrapeCDA:
 
 
 cda = ScrapeCDA()
-URI = "https://www.cda.pl/Snikibiki1337/folder/23386979"
+# URI = "https://www.cda.pl/Snikibiki1337/folder/23386979"
 
 
-with open("pliki.txt", "w") as f:
-    for video in asyncio.run(cda.get_new_videos(1)):
-        link = cda.get_video_download(video.link)
-        print(link)
-        f.write(link+ "\n")
+i = asyncio.run(cda.get_new_videos(34))
+print(i)
+
+# with open("pliki.txt", "w") as f:
+#     for video in asyncio.run(cda.get_new_videos(1)):
+#         link = cda.get_video_download(video.link)
+#         print(link)
+#         f.write(link+ "\n")
+
 
 # print(cda.get_video_download("https://www.cda.pl/video/556194077"))
