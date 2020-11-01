@@ -16,3 +16,4 @@ class TOTPer(pyotp.TOTP):
     
     def checkCode(self, code: int) -> bool:
         return code == self.getCode()
+

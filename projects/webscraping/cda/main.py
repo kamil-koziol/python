@@ -4,6 +4,7 @@ import csv
 from collections import namedtuple
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+
 from typing import List, Optional
 import asyncio
 import aiohttp
@@ -101,9 +102,21 @@ class ScrapeCDA:
 cda = ScrapeCDA()
 # URI = "https://www.cda.pl/Snikibiki1337/folder/23386979"
 
+folder = asyncio.run(cda.get_folder("https://www.cda.pl/TheTadelaX/folder/20948491"))
+# download_links = []
+# for vid in folder:
+#     d_link = cda.get_video_download(vid[1])
+#     print(d_link)
+#     download_links.append(d_link)
 
-i = asyncio.run(cda.get_new_videos(34))
-print(i)
+with open("TEST.csv", 'w') as f:
+    writer = csv.writer(f)
+    for vid in folder:
+        writer.writerow(vid)
+
+
+# i = asyncio.run(cda.get_new_videos(34))
+# print(i)
 
 # with open("pliki.txt", "w") as f:
 #     for video in asyncio.run(cda.get_new_videos(1)):
