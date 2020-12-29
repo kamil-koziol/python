@@ -2,8 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 from collections import namedtuple
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 
 from typing import List, Optional
 import asyncio
